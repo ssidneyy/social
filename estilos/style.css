@@ -38,6 +38,25 @@ iframe#tela { /* configuração para iframe de ID="tela", os dados abaixos foram
     position: relative;
     top: 80px;
     left: 22px;
-    width: 269px;
+    width: 267px;
     height: 471px;
+}
+
+section#redes-sociais {
+    text-align: right;      /* para que as logos fiquem no lado direito (antes estava no lado esquerdo) */
+}
+
+section#redes-sociais img { /* configurando as img dentro das section com id redes-sociais*/
+    width: 50px;            /* mudando apenas a largura, diminiu tambem a altura (height) */
+    margin: 10px;           /* para dar um espaço entre as logos (imagens) */
+    border-radius: 50%;     /* faz com que as bordas fiquem arredondadas, fazendo as logos em formato arredondado */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);   /* adicionou uma sombra nas logos */
+    box-sizing: border-box; /* faz com que as bordas façam parte da caixa (antes devido o img:hover abaixo as logos estavam se mexendo) */
+}
+
+section#redes-sociais img:hover {                     /* ao passar o mouse em cima das logos */
+    border: 2px solid rgba(255, 255, 255, 0.637);   /* ao passar o mouse, cria uma borda braca em volta das logos */
+    transform: translate(-3px, -3px);                 /* ao passar o mouse, da uma leve deslocada do lugar */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);  /* sombra criada devido ao transform:translate acima */
+    transition: transform 0.5s, border 1s;     /* cria uma leve transição de 0.5s no trasform acima, e a border aparece apos 1 segundo */
 }
