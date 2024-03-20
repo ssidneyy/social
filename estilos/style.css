@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* { /* reset total para o projeto ficar sem margen e padding */
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh; /* altura total do navegador */
+    width: 100vw;  /* largura total do navegador */
+    background-color: black;
+}
+
+body {
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center; /* (sem repetir) alinhamento vai ser pelo topo e centralizado */
+    background-size: cover;        /* para cobrir a tela inteira */
+    background-attachment: fixed;  /* fixar para nao haver rolagem */
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+section#telefone {
+/* lembrando que position: absolute top: 50% left: 50% fazem que a pontinha esquerda superior fique no meio da main que tem a position: relative [entao foi aplicado o transform: translate(-50%, -50%) para que o a "imagem" fique exatamente no meio]. o height e width são as medidas exatas da imagem frame-iphone.png */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat; /* no-repeat para imagem nao ficar repetindo */
+}
